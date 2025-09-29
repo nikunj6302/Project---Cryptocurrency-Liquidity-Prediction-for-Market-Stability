@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict the Cryptocoin Marcket Stability</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        input {
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            background: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Predict the Cryptocoin Market Stability</h2>
+
+        <form action="/predict" method="post">
+            <label for="coin">Coin Name:</label>
+            <input type="text" class="form-control" id="coin" name="coin"><br>
+
+            <label for="price">Current Price:</label>
+            <input type="text" class="form-control" id="price" name="price" required="required"><br>
+
+            <label for="1h">Price variation in 1h:</label>
+            <input type="text" class="form-control" id="1h" name="1h" required="required"><br>
+
+            <label for="24h">Price variation in 24h:</label>
+            <input type="text" class="form-control" id="24h" name="24h" required="required"><br>
+
+            <label for="7d">Price variation in 7d:</label>
+            <input type="text" class="form-control" id="7d" name="7d" required="required"><br>
+
+            <label for="24h_volume">Volume Exchange in 24h:</label>
+            <input type="text" class="form-control" id="24h_volume" name="24h_volume" required="required"><br>
+
+            <label for="mkt_cap">Market Capital:</label>
+            <input type="text" class="form-control" id="mkt_cap" name="mkt_cap" required="required"><br>
+
+            <button type="predict" value="predict">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
